@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, redirect, request
 import os
+import logging
 app = Flask(__name__)
 
 
@@ -14,6 +15,9 @@ def index():
 def change_link():
     args = request.args
     data = request.form
+    logging.info('in change_link')
+    logging.info(args)
+    logging.info(data)
     token = args.get('token')
     if token == os.environ.get("SECURITY_TOKEN"):
         link = data.get('link')
