@@ -22,6 +22,7 @@ def change_link():
         f = open("link.txt", "w")
         f.write(link)
         f.close()
+    return link, token
     
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
