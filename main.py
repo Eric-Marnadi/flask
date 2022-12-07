@@ -1,7 +1,5 @@
-from flask import Flask, jsonify, redirect
-from urllib import request
+from flask import Flask, jsonify, redirect, request
 import os
-
 app = Flask(__name__)
 
 
